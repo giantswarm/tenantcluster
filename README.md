@@ -2,7 +2,5 @@
 
 # tenantcluster
 
-
-
 Package tenantcluster implements primitives for access management of Giant Swarm
 Kubernetes tenant clusters.
