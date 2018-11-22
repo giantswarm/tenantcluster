@@ -139,7 +139,7 @@ func (g *TenantCluster) newRestConfig(ctx context.Context, clusterID, apiDomain 
 	{
 		tls, err = g.certsSearcher.SearchTLS(clusterID, g.certID)
 		if certs.IsTimeout(err) {
-			return nil, microerror.Maskf(timeoutError, "waited too long for certificates")
+			return nil, microerror.Maskf(timeoutError, err.Error())
 		} else if err != nil {
 			return nil, microerror.Mask(err)
 		}
