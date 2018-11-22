@@ -13,7 +13,8 @@ import (
 	"k8s.io/client-go/rest"
 )
 
-// Config represents the configuration used to create a new tenant cluster service.
+// Config represents the configuration used to create a new tenant cluster
+// service.
 type Config struct {
 	CertsSearcher certs.Interface
 	Logger        micrologger.Logger
