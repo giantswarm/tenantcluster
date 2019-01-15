@@ -58,14 +58,14 @@ required = [
   name = "github.com/giantswarm/micrologger"
 
 [[constraint]]
-  branch = "master"
+  branch = "kubernetes-1.13.2"
   name = "github.com/giantswarm/operatorkit"
 
-[[override]]
+[[constraint]]
   name = "k8s.io/apiserver"
   version = "kubernetes-1.13.2"
 
-[[override]]
+[[constraint]]
   name = "k8s.io/client-go"
   version = "kubernetes-1.13.2"
 

@@ -118,10 +118,10 @@
   revision = "39ed6a99d31b8962e38dfaff287125fb756e8b2a"
 
 [[projects]]
-  branch = "master"
+  branch = "kubernetes-1.13.2"
   name = "github.com/giantswarm/operatorkit"
   packages = ["client/k8srestconfig"]
-  revision = "585a9b06d129239a26bc87bdf483f3abad18e8a6"
+  revision = "dfeb06fe04cff5c9a6fbf8ef777f0fb31ee40462"
 
 [[projects]]
   name = "github.com/go-kit/kit"
@@ -626,6 +626,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ca0d53d971921ec2e7ddb2fbba98659ec40b5f0a9a86a4a6d83a16741e40e085"
+  inputs-digest = "5b189ac66cc3f6e82cd6de3d3db49fbb565fdd79cb68e9f4fe934e938967069c"
   solver-name = "gps-cdcl"
   solver-version = 1
