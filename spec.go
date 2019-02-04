@@ -5,6 +5,7 @@ import (
 
 	"github.com/giantswarm/apiextensions/pkg/clientset/versioned"
 	"github.com/giantswarm/helmclient"
+	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/client-go/kubernetes"
 )
 
@@ -21,5 +22,5 @@ type Interface interface {
 	NewK8sClient(ctx context.Context, clusterID, apiDomain string) (kubernetes.Interface, error)
 	// NewK8sExtClient returns a new Kubernetes extensions clientset for a
 	// tenant cluster.
-	NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (kubernetes.Interface, error)
+	NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (apiextensionsclient.Interface, error)
 }

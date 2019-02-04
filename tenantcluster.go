@@ -4,12 +4,12 @@ import (
 	"context"
 
 	"github.com/giantswarm/apiextensions/pkg/clientset/versioned"
-	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"github.com/giantswarm/certs"
 	"github.com/giantswarm/helmclient"
 	"github.com/giantswarm/microerror"
 	"github.com/giantswarm/micrologger"
 	"github.com/giantswarm/operatorkit/client/k8srestconfig"
+	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 )
@@ -129,11 +129,9 @@ func (g *TenantCluster) NewK8sClient(ctx context.Context, clusterID, apiDomain s
 	return k8sClient, nil
 }
 
-apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
-
 // NewK8sExtClient returns a Kubernetes extensions clientset for creating CRDs
 // in the specified tenant cluster.
-func (g *TenantCluster) NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (kubernetes.Interface, error) {
+func (g *TenantCluster) NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (apiextensionsclient.Interface, error) {
 	g.logger.LogCtx(ctx, "level", "debug", "message", "creating K8s extensions client for the tenant cluster")
 
 	restConfig, err := g.newRestConfig(ctx, clusterID, apiDomain)
