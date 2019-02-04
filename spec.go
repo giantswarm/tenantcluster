@@ -19,4 +19,7 @@ type Interface interface {
 	NewHelmClient(ctx context.Context, clusterID, apiDomain string) (helmclient.Interface, error)
 	// NewK8sClient returns a new Kubernetes clientset for a tenant cluster.
 	NewK8sClient(ctx context.Context, clusterID, apiDomain string) (kubernetes.Interface, error)
+	// NewK8sExtClient returns a new Kubernetes extensions clientset for a
+	// tenant cluster.
+	NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (kubernetes.Interface, error)
 }
