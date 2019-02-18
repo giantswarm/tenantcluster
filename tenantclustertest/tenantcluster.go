@@ -6,42 +6,35 @@ import (
 	"github.com/giantswarm/apiextensions/pkg/clientset/versioned"
 	"github.com/giantswarm/helmclient"
 	"github.com/giantswarm/tenantcluster"
-	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/client-go/kubernetes"
 )
 
 type Config struct {
-	G8sClient         versioned.Interface
-	G8sClientError    error
-	HelmClient        helmclient.Interface
-	HelmClientError   error
-	K8sClient         kubernetes.Interface
-	K8sClientError    error
-	K8sExtClient      apiextensionsclient.Interface
-	K8sExtClientError error
+	G8sClient       versioned.Interface
+	G8sClientError  error
+	HelmClient      helmclient.Interface
+	HelmClientError error
+	K8sClient       kubernetes.Interface
+	K8sClientError  error
 }
 
 type TenantCluster struct {
-	g8sClient         versioned.Interface
-	g8sClientError    error
-	helmClient        helmclient.Interface
-	helmClientError   error
-	k8sClient         kubernetes.Interface
-	k8sClientError    error
-	k8sExtClient      apiextensionsclient.Interface
-	k8sExtClientError error
+	g8sClient       versioned.Interface
+	g8sClientError  error
+	helmClient      helmclient.Interface
+	helmClientError error
+	k8sClient       kubernetes.Interface
+	k8sClientError  error
 }
 
 func New(config Config) tenantcluster.Interface {
 	t := &TenantCluster{
-		g8sClient:         config.G8sClient,
-		g8sClientError:    config.G8sClientError,
-		helmClient:        config.HelmClient,
-		helmClientError:   config.HelmClientError,
-		k8sClient:         config.K8sClient,
-		k8sClientError:    config.K8sClientError,
-		k8sExtClient:      config.K8sExtClient,
-		k8sExtClientError: config.K8sExtClientError,
+		g8sClient:       config.G8sClient,
+		g8sClientError:  config.G8sClientError,
+		helmClient:      config.HelmClient,
+		helmClientError: config.HelmClientError,
+		k8sClient:       config.K8sClient,
+		k8sClientError:  config.K8sClientError,
 	}
 
 	return t
@@ -69,12 +62,4 @@ func (t *TenantCluster) NewK8sClient(ctx context.Context, clusterID, apiDomain s
 	}
 
 	return t.k8sClient, nil
-}
-
-func (t *TenantCluster) NewK8sExtClient(ctx context.Context, clusterID, apiDomain string) (apiextensionsclient.Interface, error) {
-	if t.k8sExtClientError != nil {
-		return nil, t.k8sExtClientError
-	}
-
-	return t.k8sExtClient, nil
 }
