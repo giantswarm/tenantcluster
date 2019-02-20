@@ -93,10 +93,10 @@
   revision = "d4c171b8af43355ae5cb35bfd63a24aae3fbcc16"
 
 [[projects]]
-  branch = "wait-for-tiller"
+  branch = "master"
   name = "github.com/giantswarm/helmclient"
   packages = ["."]
-  revision = "c031f52dd70f833737291e8f96872793e6938eb5"
+  revision = "8b2aa2e7ebec773dcf8e02e9e34c8085ef08697f"
 
 [[projects]]
   branch = "master"
@@ -299,7 +299,7 @@
     "scrypt",
     "ssh/terminal"
   ]
-  revision = "74369b46fc6756741c016591724fd1cb8e26845f"
+  revision = "a4c6cb3142f211c99e4bf4cd769535b29a9b616f"
 
 [[projects]]
   branch = "master"
@@ -323,7 +323,7 @@
     ".",
     "internal"
   ]
-  revision = "3e8b2be1363542a95c52ea0796d4a40dacfb5b95"
+  revision = "4b83411ed2b36bd4e3302e9b1d3c973fb1ba24db"
 
 [[projects]]
   branch = "master"
@@ -338,7 +338,7 @@
     "unix",
     "windows"
   ]
-  revision = "d0b11bdaac8adb652bff00e49bcacf992835621a"
+  revision = "90b0e4468f9980bf79a2290394adaf7f045c5d24"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -385,7 +385,7 @@
   branch = "master"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
-  revision = "bd968387e4aa590b3c6e4ba38ecac1ed314d43ad"
+  revision = "082222b4a5c572e33e82ee9162d1352c7cf38682"
 
 [[projects]]
   name = "google.golang.org/grpc"
@@ -640,6 +640,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "06b20303b5bc7abcb3a311b046cba8ad760254efcadc495716e7cc16fa57f106"
+  inputs-digest = "d8456b307c32575306c0f682893b7d20fd30266d5223af1670521501e4b60f31"
   solver-name = "gps-cdcl"
   solver-version = 1
