@@ -75,7 +75,7 @@ required = [
 
 [[override]]
   name = "k8s.io/helm"
-  version = "=2.13.1"
+  version = "v2.14.0"
 
 
 
