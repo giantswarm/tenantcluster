@@ -57,6 +57,47 @@ func NewSearcher(config Config) (*Searcher, error) {
 	return s, nil
 }
 
+func (s *Searcher) SearchAppOperator(clusterID string) (AppOperator, error) {
+	var appOperator AppOperator
+
+	certificates := []struct {
+		TLS  *TLS
+		Cert Cert
+	}{
+		{TLS: &appOperator.APIServer, Cert: AppOperatorAPICert},
+	}
+
+	g := &errgroup.Group{}
+	m := sync.Mutex{}
+
+	for _, certificate := range certificates {
+		c := certificate
+
+		g.Go(func() error {
+			secret, err := s.search(c.TLS, clusterID, c.Cert)
+			if err != nil {
+				return microerror.Mask(err)
+			}
+
+			m.Lock()
+			defer m.Unlock()
+			err = fillTLSFromSecret(c.TLS, secret, clusterID, c.Cert)
+			if err != nil {
+				return microerror.Mask(err)
+			}
+
+			return nil
+		})
+	}
+
+	err := g.Wait()
+	if err != nil {
+		return AppOperator{}, microerror.Mask(err)
+	}
+
+	return appOperator, nil
+}
+
 func (s *Searcher) SearchCluster(clusterID string) (Cluster, error) {
 	var cluster Cluster
 
@@ -83,6 +124,7 @@ func (s *Searcher) SearchCluster(clusterID string) (Cluster, error) {
 			if err != nil {
 				if c.optional {
 					s.logger.Log("level", "warning", "message", err.Error())
+					return nil
 				} else {
 					return microerror.Mask(err)
 				}
@@ -251,7 +293,7 @@ func (s *Searcher) search(tls *TLS, clusterID string, cert Cert) (*corev1.Secret
 	// cluster clusterID.
 	selector := fmt.Sprintf("%s=%s, %s=%s", legacyCertificateLabel, cert, legacyClusterIDLabel, clusterID)
 
-	watcher, err := s.k8sClient.Core().Secrets(SecretNamespace).Watch(metav1.ListOptions{
+	watcher, err := s.k8sClient.CoreV1().Secrets(SecretNamespace).Watch(metav1.ListOptions{
 		LabelSelector: selector,
 	})
 	if err != nil {
