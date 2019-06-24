@@ -50,6 +50,14 @@
   version = "v2.2.0"
 
 [[projects]]
+  digest = "1:ec66ad050342a3573ed2f5a4337d51b4c6d5d2a717cc6c9ecf86b081235a5759"
+  name = "github.com/cyphar/filepath-securejoin"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "a261ee33d7a517f054effbf451841abaafe3e0fd"
+  version = "v0.2.2"
+
+[[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
@@ -134,11 +142,11 @@
 
 [[projects]]
   branch = "k8s-1.15"
-  digest = "1:6ad9f9f78c9ced4d4abe51d83e44aff6e28f22afaa1cb389ede0212954a3f9c1"
+  digest = "1:a4d1b05c75c969ee7c9d7d0de2d4d1fe74201bace83f9e1c5f4f61f3f8f768f6"
   name = "github.com/giantswarm/helmclient"
   packages = ["."]
   pruneopts = "UT"
-  revision = "50713864f8a79a9b57eb976cc52e37f196365ade"
+  revision = "2f6d936247b6d669543dcc0c53135f1ef0e92529"
 
 [[projects]]
   branch = "k8s-1.15"
@@ -173,7 +181,7 @@
   name = "github.com/giantswarm/operatorkit"
   packages = ["client/k8srestconfig"]
   pruneopts = "UT"
-  revision = "145eb9d0088361ae46d3714a07ad73a2df377220"
+  revision = "3274f8d041469b9d69f108097188f089f3e259d0"
 
 [[projects]]
   branch = "master"
@@ -350,6 +358,14 @@
   version = "v1.0.0-rc1"
 
 [[projects]]
+  digest = "1:cf31692c14422fa27c83a05292eb5cbe0fb2775972e8f1f8446a71549bd8980b"
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
+  version = "v0.8.1"
+
+[[projects]]
   digest = "1:641a6f02ac68db91eee65eed28a23630b215aea79e39b3dbcfa0fdbb19cd11de"
   name = "github.com/prometheus/client_golang"
   packages = [
@@ -460,14 +476,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:a6a2e1e294ce422296f7721535d1dfde83922317f8638b06f2b7a37ee09a8e9f"
+  digest = "1:fe40fbf915905f8a2397b321b3f10190edbdf5d293f087d01d7eb3a6d1a4adca"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "d432491b91382bba9c2a91776aa47c9430183a6f"
+  revision = "c5567b49c5d04a5f83870795b8c0e2df43a8ce32"
 
 [[projects]]
   digest = "1:8d8faad6b12a3a4c819a3f9618cb6ee1fa1cfc33253abeeea8b55336721e3405"
@@ -772,7 +788,7 @@
   version = "kubernetes-1.15.0"
 
 [[projects]]
-  digest = "1:cd9f912ae4effd7766091945c41a7ff07be6720c8ad7fd0c992fe31980d00889"
+  digest = "1:4b8df8b59b3c492a6cb8ab496ec3560c7b3f8bc4b45541ee75832a4107b61bb2"
   name = "k8s.io/helm"
   packages = [
     "cmd/helm/installer",
@@ -793,8 +809,8 @@
     "pkg/version",
   ]
   pruneopts = "UT"
-  revision = "d325d2a9c179b33af1a024cdb5a4472b6288016a"
-  version = "v2.12.0"
+  revision = "618447cbf203d147601b4b9bd7f8c37a5d39fbb4"
+  version = "v2.13.1"
 
 [[projects]]
   digest = "1:c283ca5951eb7d723d3300762f96ff94c2ea11eaceb788279e2b7327f92e4f2a"

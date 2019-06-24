@@ -61,6 +61,10 @@ required = [
   branch = "k8s-1.15"
   name = "github.com/giantswarm/operatorkit"
 
+[[override]]
+  version = "v1.5.2"
+  name = "github.com/russross/blackfriday"
+
 [[constraint]]
   name = "k8s.io/apiserver"
   version = "kubernetes-1.15.0"
@@ -68,6 +72,10 @@ required = [
 [[constraint]]
   name = "k8s.io/client-go"
   version = "kubernetes-1.15.0"
+
+[[override]]
+  name = "k8s.io/helm"
+  version = "=2.13.1"
 
 
 
