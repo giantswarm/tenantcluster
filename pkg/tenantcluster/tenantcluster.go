@@ -3,8 +3,8 @@ package tenantcluster
 import (
 	"context"
 
-	"github.com/giantswarm/certs/v2/pkg/certs"
-	"github.com/giantswarm/k8sclient/v3/pkg/k8srestconfig"
+	"github.com/giantswarm/certs/v3/pkg/certs"
+	"github.com/giantswarm/k8sclient/v4/pkg/k8srestconfig"
 	"github.com/giantswarm/microerror"
 	"github.com/giantswarm/micrologger"
 	"k8s.io/client-go/rest"
