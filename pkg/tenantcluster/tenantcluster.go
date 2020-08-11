@@ -3,8 +3,8 @@ package tenantcluster
 import (
 	"context"
 
-	"github.com/giantswarm/certs/v2/pkg/certs"
-	"github.com/giantswarm/k8sclient/k8srestconfig"
+	"github.com/giantswarm/certs/v3/pkg/certs"
+	"github.com/giantswarm/k8sclient/v4/pkg/k8srestconfig"
 	"github.com/giantswarm/microerror"
 	"github.com/giantswarm/micrologger"
 	"k8s.io/client-go/rest"
@@ -57,7 +57,7 @@ func (t *TenantCluster) NewRestConfig(ctx context.Context, clusterID, apiDomain 
 
 	var tls certs.TLS
 	{
-		tls, err = t.certsSearcher.SearchTLS(clusterID, t.certID)
+		tls, err = t.certsSearcher.SearchTLS(ctx, clusterID, t.certID)
 		if certs.IsTimeout(err) {
 			return nil, microerror.Maskf(timeoutError, err.Error())
 		} else if err != nil {
