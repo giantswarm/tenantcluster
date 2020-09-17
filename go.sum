@@ -118,6 +118,8 @@ github.com/giantswarm/apiextensions/v2 v2.0.0/go.mod h1:/qSx5jA2F5um0ipvVDMZJz+r
 github.com/giantswarm/backoff v0.2.0/go.mod h1:Z3WRsFilSJ5H5VlFa4XhraoPr+9pmZgYasoY2OSfNOk=
 github.com/giantswarm/certs/v3 v3.0.0 h1:kdvv5S7KYP0VRskHX3h3vvD4dV8YoSDGaEe7a154Idw=
 github.com/giantswarm/certs/v3 v3.0.0/go.mod h1:fkmIW3moxlrldZhN99fnbBohsDJaki/WCHeNyIN2sr8=
+github.com/giantswarm/certs/v3 v3.0.1-0.20200917104320-503ea3d8f24e h1:v9KlKJrIcw60L6EEeQQLx5ZNcNPeVWhrxGkH/3YfZzk=
+github.com/giantswarm/certs/v3 v3.0.1-0.20200917104320-503ea3d8f24e/go.mod h1:fkmIW3moxlrldZhN99fnbBohsDJaki/WCHeNyIN2sr8=
 github.com/giantswarm/k8sclient/v4 v4.0.0 h1:K18A0FomGjxTMElcGrjO3uLkYobUtcNh8e8PhTgFr2w=
 github.com/giantswarm/k8sclient/v4 v4.0.0/go.mod h1:jTwQ8q0YbJJu3ZxbjoI6hkXeuvKm15xyI/c+zwxnUH0=
 github.com/giantswarm/microerror v0.2.0 h1:SaE7S34mp/wEiQkgtPiq8wQbNUTCj1gjiCWPjO3wgJo=
