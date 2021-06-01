@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.0] - 2021-06-01
+
 ### Changed
 
 - Upgrade certs to v3.3.1 to support watching secrets in all namespaces.
@@ -51,7 +53,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/giantswarm/tenantcluster/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/giantswarm/tenantcluster/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/giantswarm/tenantcluster/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/giantswarm/tenantcluster/compare/v0.2.0...v2.0.0
