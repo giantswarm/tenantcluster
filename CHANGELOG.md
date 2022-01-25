@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] - 2022-01-25
+
 ### Changed
 
 - Update k8sclient to v7.
@@ -57,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/giantswarm/tenantcluster/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/giantswarm/tenantcluster/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/giantswarm/tenantcluster/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/giantswarm/tenantcluster/compare/v2.0.0...v3.0.0
