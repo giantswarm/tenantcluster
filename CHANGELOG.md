@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Increase major module version
 - Update go to 1.17
 - Update github.com/giantswarm/certs/v4 to v4.0.0
 - Update k8s.io/client-go to v0.22.2
