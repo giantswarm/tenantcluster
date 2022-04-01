@@ -1,4 +1,4 @@
-module github.com/giantswarm/tenantcluster/v5
+module github.com/giantswarm/tenantcluster/v6
 
 go 1.17
 
