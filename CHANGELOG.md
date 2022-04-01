@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.0.0] - 2022-04-01
+
 ### Changed
 
 - Increase major module version
@@ -67,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v5.0.0...HEAD
+[Unreleased]: https://github.com/giantswarm/tenantcluster/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/giantswarm/tenantcluster/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/giantswarm/tenantcluster/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/giantswarm/tenantcluster/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/giantswarm/tenantcluster/compare/v3.0.0...v4.0.0
