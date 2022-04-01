@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update go to 1.17
+- Update github.com/giantswarm/certs/v4 to v4.0.0
+- Update k8s.io/client-go to v0.22.2
+- Update architect orb to v4.15.0
+
 ## [5.0.0] - 2022-01-25
 
 ### Changed
