@@ -1,6 +1,6 @@
 module github.com/giantswarm/tenantcluster/v6
 
-go 1.17
+go 1.19
 
 require (
 	github.com/giantswarm/certs/v4 v4.0.0
